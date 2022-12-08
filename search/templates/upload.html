@@ -1,0 +1,79 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class=uploadPage>
+<div class="return">
+  <div class="row">
+    <div class="col-25">
+      <button style="font-size:17px" onclick="history.back()">Back <i class="fa fa-arrow-circle-left"></i></button>
+    </div>
+
+
+<h2><center> UPLOAD PD DOCUMENT </center></h2>
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-25">
+        <label for="researchTitle">PROJECT DESIGN TITLE</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="researchTitle" name="Research Title" placeholder="PROJECT DESIGN TITLE">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="abstract">ABSTRACT</label>
+      </div>
+      <div class="col-75">
+        <textarea  id="abstract" name="abstract" placeholder="PROJECT DESIGN ABSTRACT" style="height:350px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="author">AUTHORS</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="author" name="author" placeholder="PROJECT DESIGN AUTHORS">
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+          <label for="year">YEAR</label>
+        </div>
+        <div class="col-75">
+          <input type="date" id="year" name="year" value="" min="1997-01-01" max="2030-12-31">
+        </div>
+    </div>
+      <div class="row">
+        <div class="col-25">
+                <label for="myfile">SELECT PDF FILE</label>
+        </div> 
+        <div class="col-75">
+            <input  type="file" accept="application/pdf" name="myfile">
+
+        </div>
+      
+      </div>
+       
+
+    
+    <div class="row">
+      <input type="submit" value="Submit">
+      <button type="cancel" value="CANCEL" onclick="history.back()">CANCEL</button>
+    </div>
+
+  
+</div>
+
+</body>
+</html>
+{% endblock %}
